@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import API_call
-import modB
-=======
-import api
-import modB
-
->>>>>>> 868e53c4a97b0473ac03fb33b4084a62b579be04
+# from pathlib import Path
+# import re, csv
+ 
+# file_path = Path(r"C:\Users\WoonChau\Desktop\school\PFB\group assignment\python\test.txt")
+# print(file_path.exists())
+ 
