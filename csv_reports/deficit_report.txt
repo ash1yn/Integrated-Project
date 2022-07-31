@@ -1,0 +1,4 @@
+[HIGHEST OVERHEADS] Salary Expense: USD $32.08
+[CASH SURPLUS] Cash-on-hand on each period is higher than the previous period
+[NET PROFIT] Net profit for each period is higher than the previous period
+[CURRENCY CONVERSION RATE] USD$1 = SGD$1.42
