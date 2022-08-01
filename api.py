@@ -6,5 +6,14 @@ url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_cu
 response = requests.get(url)
 print(response) # returns <Response [200]> which means it is a successful API call
 
-print(response.json())
+data = response.json()
+print(data)
+
+def convertUSDtoSGD(USD):
+    """
+    - converts USD to SGD
+    - one parameter required: USD
+    """
+    return USD * 1.37972000
+
 

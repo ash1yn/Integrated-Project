@@ -1,5 +1,6 @@
 from pathlib import Path
 import re, csv
+from api import convertUSDtoSGD
 
 cash_on_hand = Path.cwd()/"csv_reports"/"Cash on Hand.csv"
 print(cash_on_hand.exists())
@@ -11,8 +12,15 @@ with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
     next (reader)
     for line in reader:
         print(line)
-        day.append(int(line[0]))
-        cash.append(int(line[1]))
+        day.append(float(line[0]))
+        cash.append(float(line[1]))
 
-    for coh in range(day, cash):
+        for value in range (day, cash):
+            if cash[value] < cash[value-1]:
+                print(f"Day: {day(value)}, Value Difference: {cash[value-1]-cash[value]}")
+            else:
+                continue
+
+
+
         
