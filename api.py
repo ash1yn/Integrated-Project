@@ -5,9 +5,7 @@ url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_cu
 
 response = requests.get(url)
 print(response) # returns <Response [200]> which means it is a successful API call
-
 data = response.json()
-print(data)
 
 USDtoSGD_Exchange_Rate = data['Realtime Currency Exchange Rate']['5. Exchange Rate']
 
