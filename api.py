@@ -9,11 +9,13 @@ print(response) # returns <Response [200]> which means it is a successful API ca
 data = response.json()
 print(data)
 
+USDtoSGD_Exchange_Rate = data['Realtime Currency Exchange Rate']['5. Exchange Rate']
+
 def convertUSDtoSGD(USD):
     """
     - converts USD to SGD
     - one parameter required: USD
     """
-    return USD * 1.37972000
+    return USD * USDtoSGD_Exchange_Rate
 
 
