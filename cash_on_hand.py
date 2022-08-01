@@ -21,7 +21,3 @@ with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
             print(f"*Day: {day(value)}, Value Difference: {cash[value-1]-cash[value]}*")
         else:
             print("Cash on hand for each period is higher than the previous period")
-
-
-
-        
