@@ -21,7 +21,7 @@ with profits_loss.open(mode = "r", encoding = "UTF-8") as file:
 
     for i in range(last_index):
         if day_profit_list[i][1] > day_profit_list[i+1][1]:
-            print(f"* Day: {day_profit_list[i+1][0]}, Value Difference: SGD {convertUSDtoSGD(day_profit_list[i][1]-day_profit_list[i+1][1])} *")
+            print(f"* DAY: {day_profit_list[i+1][0]}, AMOUNT: SGD {convertUSDtoSGD(day_profit_list[i][1]-day_profit_list[i+1][1])} *")
             all_higher = FALSE
 
     if all_higher == TRUE:
