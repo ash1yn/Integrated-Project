@@ -20,7 +20,7 @@ with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
 
     for i in range(last_index):
         if day_cash_list[i][1] > day_cash_list[i+1][1]:
-            print(f"* Day: {day_cash_list[i+1][0]}, Value Difference: SGD {convertUSDtoSGD(day_cash_list[i][1]-day_cash_list[i+1][1])} *")
+            print(f"* DAY: {day_cash_list[i+1][0]}, AMOUNT: SGD {convertUSDtoSGD(day_cash_list[i][1]-day_cash_list[i+1][1])} *")
             all_higher = FALSE
         
     if all_higher == TRUE:
