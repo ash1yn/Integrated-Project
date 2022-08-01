@@ -17,7 +17,7 @@ with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
 
         for value in range (day, cash):
             if cash[value] < cash[value-1]:
-                print(f"Day: {day(value)}, Value Difference: {cash[value-1]-cash[value]}")
+                print(f"*Day: {day(value)}, Value Difference: {cash[value-1]-cash[value]}*")
             else:
                 continue
 
