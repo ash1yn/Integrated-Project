@@ -1,10 +1,10 @@
 from pathlib import Path
 import re, csv
 
-file_path = Path.cwd()/"csv_reports"/"Profit and Loss.csv"
-print(file_path.exists())
+profits_loss = Path.cwd()/"csv_reports"/"Profit and Loss.csv"
+print(profits_loss.exists())
 
-with file_path.open(mode = "r", encoding = "UTF-8") as file:
+with profits_loss.open(mode = "r", encoding = "UTF-8") as file:
     reader = csv.reader(file)
     for line in reader:
         print(line)
