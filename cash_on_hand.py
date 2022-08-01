@@ -11,10 +11,11 @@ with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
     next (reader)
     for line in reader:
         print(line)
+        day.append(int(line[0]))
         cash.append(int(line[1]))
     
     for coh in range(day, cash):
-        
+
 
 
 print(cash)
