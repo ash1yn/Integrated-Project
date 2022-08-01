@@ -1,11 +1,22 @@
 from pathlib import Path
 import re, csv
-from api import convertUSDtoSGD
 
 cash_on_hand = Path.cwd()/"csv_reports"/"Cash on Hand.csv"
 print(cash_on_hand.exists())
 
-with cash_on_hand.open(mode = "r", encoding = "UTF-8") as file:
+cash = []
+day = []
+with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
     reader = csv.reader(file)
+    next (reader)
     for line in reader:
         print(line)
+        cash.append(int(line[1]))
+    
+    for coh in range(day, cash):
+        
+
+
+print(cash)
+    
+        
