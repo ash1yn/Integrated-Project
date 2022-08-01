@@ -1,7 +1,6 @@
 from pathlib import Path
 from pickle import FALSE, TRUE
 import re, csv
-import string
 from api import convertUSDtoSGD
 
 cash_on_hand = Path.cwd()/"csv_reports"/"Cash on Hand.csv"
