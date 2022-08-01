@@ -1,4 +1,5 @@
 from pathlib import Path
+from pickle import FALSE, TRUE
 import re, csv
 import string
 from api import convertUSDtoSGD
@@ -6,22 +7,22 @@ from api import convertUSDtoSGD
 cash_on_hand = Path.cwd()/"csv_reports"/"Cash on Hand.csv"
 print(cash_on_hand.exists())
 
-cash = []
-day = []
+day_cash_list = []
 with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
     reader = csv.reader(file)
     next (reader)
     for line in reader:
-        print(line)
-        day.append(float(line[0]))
-        cash.append(float(line[1]))
+        # print(line)
+        day_cash_list.append([int(line[0]), int(line[1])])
 
-    for value in range (day, cash):
-        if cash[value] < cash[value-1]:
-            print(f"*Day: {day(value)}, Value Difference: {cash[value-1]-cash[value]}*")
-        else:
-            print("Cash on hand for each period is higher than the previous period")
+    last_index = len(day_cash_list)-1
 
+    all_higher = TRUE
 
-
+    for i in range(last_index):
+        if day_cash_list[i][1] > day_cash_list[i+1][1]:
+            print(f"*Day: {day_cash_list[i+1][0]}, Value Difference: SGD{convertUSDtoSGD(day_cash_list[i][1]-day_cash_list[i+1][1])}*")
+            all_higher = FALSE
         
+    if all_higher == TRUE:
+        print("Cash on hand for each period is higher than the previous period")
