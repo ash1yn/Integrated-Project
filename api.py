@@ -1,7 +1,7 @@
 import requests 
 from pathlib import Path
 
-api_key =  "GJ9XBY2S6TIDBORV"
+api_key =  "IRBNECTG8CFEVS20"
 url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey={api_key}"
 summary_report = Path.cwd()/"summary_report.txt"
 print(summary_report.exists())
