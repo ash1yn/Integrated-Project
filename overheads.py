@@ -2,13 +2,16 @@ from pathlib import Path
 import re, csv
 from api import convertUSDtoSGD
 
+highest = 0 
+
 def overheads_summary_report():
+    global highest
+    
     overheads = Path.cwd()/"csv_reports"/"Overheads.csv"
     # Create a file_path to the "Overheads.csv" file in the "csv_reports" folder
 
     overheads_list = []
     # Create an empty list to append
-    highest = 0
 
     with overheads.open(mode = "r", encoding = "UTF-8") as file:
     # Opens "Overheads.csv" file in read mode
