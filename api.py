@@ -21,7 +21,7 @@ def convertUSDtoSGD(USD):
     - converts USD to SGD
     - one parameter required: USD
     """
-    return 1 * USDtoSGD_Exchange_Rate
+    return USD * USDtoSGD_Exchange_Rate
 
     
 

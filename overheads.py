@@ -26,5 +26,5 @@ def overheads_summary_report():
         for i in range(last_index):
             if overheads_list[i][1] > highest:
                 highest = overheads_list[i][1]
-                print(f"{overheads_list[i][0]} : SGD {convertUSDtoSGD(highest)}")
+                return (f"[HIGHEST OVERHEADS] {overheads_list[i][0]} : SGD {convertUSDtoSGD(highest)}")
         # Finds the highest overhead category and its corresponding value in SGD

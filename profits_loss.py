@@ -27,11 +27,11 @@ def profits_and_loss_summary_report():
         for i in range(last_index):
             if day_profit_list[i][1] > day_profit_list[i+1][1]:
             # If the net profit value is not consecutively higher each day, 
-                print(f"* DAY: {day_profit_list[i+1][0]}, AMOUNT: SGD {convertUSDtoSGD(day_profit_list[i][1]-day_profit_list[i+1][1])} *")
+                return (f"[NET DEFICIT] DAY: {day_profit_list[i+1][0]}, AMOUNT: SGD {convertUSDtoSGD(day_profit_list[i][1]-day_profit_list[i+1][1])}")
                 # The day where net profit is lower than the previous day and the value difference in SGD, will be highlighted
                 all_higher = FALSE
 
         if all_higher == TRUE:
         # If net profit value is consecutively higher each day,
-            print("Net Profit for each period is higher than the previous period")
+            return "[NET SURPLUS] Net Profit for each period is higher than the previous period"
         
