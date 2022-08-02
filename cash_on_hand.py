@@ -31,6 +31,6 @@ with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
             all_higher = FALSE
         
     if all_higher == TRUE:
-    # if cash on hand value is consecutively higher each day
+    # If cash on hand value is consecutively higher each day
         print("Cash on hand for each period is higher than the previous period")
         
