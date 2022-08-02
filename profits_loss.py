@@ -1,5 +1,5 @@
 from pathlib import Path
-from pickle import FAL
+from pickle import FA
 import re, csv
 from api import convertUSDtoSGD
 
