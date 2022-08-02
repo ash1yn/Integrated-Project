@@ -4,7 +4,7 @@ import re, csv
 from api import convertUSDtoSGD
 
 profits_loss = Path.cwd()/"csv_reports"/"Profit and Loss.csv"
-# Create a file path to the "Profit and Loss.csv" in the "csv_reports" folder
+# Create a file path to the "Profit and Loss.csv" file in the "csv_reports" folder
 print(profits_loss.exists())
 
 day_profit_list = []
