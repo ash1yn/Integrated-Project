@@ -26,6 +26,8 @@ def profits_and_loss_summary_report():
         # Create an empty list to append
         for i in range (last_index):
             if day_profit_list[i][1] > day_profit_list[i+1][1]:
+            # If the net profit values is not consecutively higher each day,
                 profits_loss_main.append([day_profit_list[i+1][0], (round(convertUSDtoSGD(day_profit_list[i][1]-day_profit_list[i+1][1]),2))])
+                # the days at which net profit is lesser than the previous day, and its corresponding value in SGD, is appended to another empty list
 
         return profits_loss_main
