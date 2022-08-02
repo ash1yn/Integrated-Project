@@ -4,7 +4,7 @@ import re, csv
 from api import convertUSDtoSGD
 
 cash_on_hand = Path.cwd()/"csv_reports"/"Cash on Hand.csv"
-# Create a file path to the "Cash on Hand.csv" in the "csv_reports" folder
+# Create a file path to the "Cash on Hand.csv" file in the "csv_reports" folder
 print(cash_on_hand.exists())
 
 day_cash_list = []
