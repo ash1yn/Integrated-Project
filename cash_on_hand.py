@@ -31,7 +31,7 @@ def cash_on_hand_summary_report():
                 # The day where cash on hand is lower than the previous day, and the value difference in SGD, will be highlighted
                 all_higher = FALSE
             
-        if all_higher == TRUE:
-        # If cash on hand value is consecutively higher each day
-            print("Cash on hand for each period is higher than the previous period")
+            if all_higher == TRUE:
+            # If cash on hand value is consecutively higher each day
+                print("Cash on hand for each period is higher than the previous period")
             
