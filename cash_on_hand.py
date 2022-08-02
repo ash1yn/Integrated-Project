@@ -25,8 +25,8 @@ def cash_on_hand_summary_report():
         cash_on_hand_main = []
         # Create an empty list to append
         for i in range (last_index):
-            if day_cash_list[i][1] > day_cash_list[i+1][1]:
-                cash_on_hand_main.append([day_cash_list[i+1][0], round(convertUSDtoSGD(day_cash_list[i][1]-day_cash_list[i+1][1]),2)])
+                if day_cash_list[i][1] > day_cash_list[i+1][1]:
+                    cash_on_hand_main.append([day_cash_list[i+1][0], round(convertUSDtoSGD(day_cash_list[i][1]-day_cash_list[i+1][1]),2)])
 
         return cash_on_hand_main
             
