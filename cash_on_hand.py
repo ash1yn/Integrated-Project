@@ -1,5 +1,5 @@
 from pathlib import Path
-from pic
+from pi
 import re, csv
 from api import convertUSDtoSGD
 
