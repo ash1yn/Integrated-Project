@@ -3,9 +3,6 @@ from pickle import FALSE, TRUE
 import re, csv
 from api import convertUSDtoSGD
 
-day_profit_list = []
-# Create an empty list to append
-
 def profits_and_loss_summary_report():
     profits_loss = Path.cwd()/"csv_reports"/"Profit and Loss.csv"
     # Create a file path to the "Profit and Loss.csv" file in the "csv_reports" folder
