@@ -10,6 +10,9 @@ overheads_list = []
 # Create an empty list to append
 highest = 0
 def overheads_summary_report():
+    overheads = Path.cwd()/"csv_reports"/"Overheads.csv"
+    # Create a file_path to the "Overheads.csv" file in the "csv_reports" folder
+    
     with overheads.open(mode = "r", encoding = "UTF-8") as file:
     # Opens "Overheads.csv" file in read mode
         reader = csv.reader(file)
