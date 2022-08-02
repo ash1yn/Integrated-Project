@@ -23,6 +23,12 @@ def convertUSDtoSGD(USD):
     """
     return USD * USDtoSGD_Exchange_Rate
 
+def exchange_rate():
+    """
+    - returns the exchange rate extracted from the API
+    """
+    return USDtoSGD_Exchange_Rate
+
     
 
 

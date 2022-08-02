@@ -1,4 +1,5 @@
 from api import convertUSDtoSGD
+from api import exchange_rate
 from cash_on_hand import cash_on_hand_summary_report
 from overheads import overheads_summary_report
 from profits_loss import profits_and_loss_summary_report
@@ -11,6 +12,8 @@ cash_on_hand = cash_on_hand_summary_report()
 profits_and_loss = profits_and_loss_summary_report()
 
 with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
+    file.write(f"[REAL TIME CURRENCY CONVERSION] USD 1 = SGD {exchange_rate()}\n")
+
     file.write(f"{overheads_summary_report()}\n")
     
     if len(cash_on_hand) == 0:
