@@ -3,6 +3,7 @@ import re, csv
 from api import convertUSDtoSGD
 
 overheads = Path.cwd()/"csv_reports"/"Overheads.csv"
+# Create a file_path to the "Overheads.csv" file in the "csv_reports" folder
 print(overheads.exists())
 
 overheads_list = []
