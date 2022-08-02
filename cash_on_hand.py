@@ -27,11 +27,11 @@ def cash_on_hand_summary_report():
         for i in range(last_index):
             if day_cash_list[i][1] > day_cash_list[i+1][1]:
             # If the cash on hand value is not consecutively higher each day (all_higher = FALSE)
-                return f"[CASH DEFICIT] DAY: {day_cash_list[i+1][0]}, AMOUNT: SGD {convertUSDtoSGD(day_cash_list[i][1]-day_cash_list[i+1][1])}"
+                return (f"[CASH DEFICIT] DAY: {day_cash_list[i+1][0]}, AMOUNT: SGD {round(convertUSDtoSGD(day_cash_list[i][1]-day_cash_list[i+1][1])),2}")
                 # The day where cash on hand is lower than the previous day, and the value difference in SGD, will be highlighted
                 all_higher = FALSE
             
-            elif all_higher == TRUE:
-            # If cash on hand value is consecutively higher each day
-                return ("[CASH SURPLUS] Cash on hand for each period is higher than the previous period")
+        if all_higher == TRUE:
+        # If cash on hand value is consecutively higher each day
+            return ("[CASH SURPLUS] Cash on hand for each period is higher than the previous period")
             
