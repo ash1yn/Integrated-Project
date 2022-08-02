@@ -1,5 +1,5 @@
 from pathlib import Path
-fro
+fr
 import re, csv
 from api import convertUSDtoSGD
 
