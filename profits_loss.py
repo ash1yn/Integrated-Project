@@ -11,7 +11,7 @@ day_profit_list = []
 # Create an empty list to append
 
 with profits_loss.open(mode = "r", encoding = "UTF-8") as file:
-# opens the "Profits and Loss.csv" file in read mode
+# Opens the "Profits and Loss.csv" file in read mode
     reader = csv.reader(file)
     # Reads the file
     next(reader)
