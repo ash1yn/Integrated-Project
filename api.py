@@ -28,7 +28,3 @@ def exchange_rate():
     - returns the exchange rate extracted from the API
     """
     return USDtoSGD_Exchange_Rate
-
-    
-
-
