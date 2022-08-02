@@ -3,12 +3,13 @@ from pickle import FALSE, TRUE
 import re, csv
 from api import convertUSDtoSGD
 
-day_cash_list = []
-# Create an empty list to append
 def cash_on_hand_summary_report():
     
     cash_on_hand = Path.cwd()/"csv_reports"/"Cash on Hand.csv"
     # Create a file path to the "Cash on Hand.csv" file in the "csv_reports" folder
+
+    day_cash_list = []
+    # Create an empty list to append    
 
     with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
     # Open the "Cash on Hand.csv" file in read mode
