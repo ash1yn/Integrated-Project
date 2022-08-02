@@ -11,7 +11,6 @@ with cash_on_hand.open(mode = "r", encoding = "UTF-8", newline = "") as file:
     reader = csv.reader(file)
     next (reader)
     for line in reader:
-        # print(line)
         day_cash_list.append([int(line[0]), int(line[1])])
 
     last_index = len(day_cash_list)-1
