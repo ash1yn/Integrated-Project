@@ -28,7 +28,7 @@ with profits_loss.open(mode = "r", encoding = "UTF-8") as file:
         if day_profit_list[i][1] > day_profit_list[i+1][1]:
         # If the net profit value is not consecutively higher each day, 
             print(f"* DAY: {day_profit_list[i+1][0]}, AMOUNT: SGD {convertUSDtoSGD(day_profit_list[i][1]-day_profit_list[i+1][1])} *")
-            # The day where net profit is lower than the previous day and the value difference will be highlighted
+            # The day where net profit is lower than the previous day and the value difference in SGD, will be highlighted
             all_higher = FALSE
 
     if all_higher == TRUE:
