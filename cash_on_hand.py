@@ -24,9 +24,12 @@ def cash_on_hand_summary_report():
 
         cash_on_hand_main = []
         # Create an empty list to append
+
         for i in range (last_index):
                 if day_cash_list[i][1] > day_cash_list[i+1][1]:
+                # If the cash on hand values is not consecutively higher each day,
                     cash_on_hand_main.append([day_cash_list[i+1][0], round(convertUSDtoSGD(day_cash_list[i][1]-day_cash_list[i+1][1]),2)])
-
+                    # the day at which cash on hand is lesser than the previous day, and the corresponding cash on hand value for the day, will be appended to another empty list
+                    
         return cash_on_hand_main
             
