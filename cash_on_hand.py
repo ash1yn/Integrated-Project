@@ -4,7 +4,6 @@ import re, csv
 from api import convertUSDtoSGD
 
 def cash_on_hand_summary_report():
-    
     cash_on_hand = Path.cwd()/"csv_reports"/"Cash on Hand.csv"
     # Create a file path to the "Cash on Hand.csv" file in the "csv_reports" folder
 
