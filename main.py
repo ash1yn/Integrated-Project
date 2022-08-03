@@ -10,6 +10,7 @@ summary_report = Path.cwd()/"summary_report.txt"
 
 cash_on_hand = cash_on_hand_summary_report()
 profits_and_loss = profits_and_loss_summary_report()
+# reports for profit and loss
 
 with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
     file.write(f"[REAL TIME CURRENCY CONVERSION] USD 1 = SGD {exchange_rate()}\n")
