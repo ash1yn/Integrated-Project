@@ -29,4 +29,4 @@ with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
         file.write(f"[NET DEFICIT] DAY: {profits_and_loss[i][0]}, AMOUNT: SGD {profits_and_loss[i][1]}\n")
     
 #
-print(helloo)
+
