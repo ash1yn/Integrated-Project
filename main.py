@@ -5,6 +5,7 @@ from overheads import overheads_summary_report
 from profits_loss import profits_and_loss_summary_report
 from pathlib import Path
 
+# Create a file path to the "summary_report.txt" file 
 summary_report = Path.cwd()/"summary_report.txt"
 # Create a file path to the "summary_report.txt" file 
 
