@@ -18,7 +18,7 @@ with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
     file.write(f"{overheads_summary_report()}\n")
     # Writes the highest overheads category and value into the "summary_report.txt" file
     
-    if len(cash_on_hand) == 0:#.
+    if len(cash_on_hand) == 0:
         file.write(f"[CASH SURPLUS] Cash on hand for each period is higher than the previous period\n")
     for l in range (len(cash_on_hand)):
         file.write(f"[CASH DEFICIT] DAY: {cash_on_hand[l][0]}, AMOUNT: SGD {cash_on_hand[l][1]}\n")
