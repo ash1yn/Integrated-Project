@@ -9,7 +9,6 @@ summary_report = Path.cwd()/"summary_report.txt"
 # Create a file path to the "summary_report.txt" file 
 
 cash_on_hand = cash_on_hand_summary_report()
-# reports
 profits_and_loss = profits_and_loss_summary_report()
 
 with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
