@@ -14,6 +14,7 @@ def convertUSDtoSGD(USD):
     - converts USD to SGD
     - one parameter required: USD
     """
+       
         
     try:
         
