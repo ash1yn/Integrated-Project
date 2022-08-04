@@ -3,8 +3,6 @@ from pathlib import Path
 
 api_key =  "G9O4IFGP94PHD0IR"
 url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey={api_key}"
-summary_report = Path.cwd()/"summary_report.txt"
-print(summary_report.exists())
 
 response = requests.get(url) 
 print(response)
@@ -23,7 +21,7 @@ def convertUSDtoSGD(USD):
         - one parameter required: USD
         """
         return USD * USDtoSGD_Exchange_Rate
-        
+
     except Exception as e:
         print(f"An error has occurred. \nReason : {e} ")
 
