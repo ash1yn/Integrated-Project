@@ -5,14 +5,9 @@ api_key =  "G9O4IFGP94PHD0IR"
 url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey={api_key}"
 
 response = requests.get(url) 
-print(response)
 # made a successful API call (ready to extract the required forex data)
 data = response.json() 
 # returns nested dictionary in a json object
-print(data)
-
-USDtoSGD_Exchange_Rate = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
-# Used to find the exchange rate from USD to SGD found in the nested dictionary
 
 def convertUSDtoSGD(USD):
     try:
@@ -20,6 +15,9 @@ def convertUSDtoSGD(USD):
         - converts USD to SGD
         - one parameter required: USD
         """
+        USDtoSGD_Exchange_Rate = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
+        # Used to find the exchange rate from USD to SGD found in the nested dictionary
+
         return USD * USDtoSGD_Exchange_Rate
 
     except Exception as e:
@@ -30,6 +28,9 @@ def exchange_rate():
         """
         - returns the exchange rate extracted from the API
         """
+        USDtoSGD_Exchange_Rate = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
+        # Used to find the exchange rate from USD to SGD found in the nested dictionary
+        
         return USDtoSGD_Exchange_Rate
 
     except Exception as e:
