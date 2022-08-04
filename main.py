@@ -16,7 +16,7 @@ with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
     # Write the real time currency conversion from USD to SGD, into the "summary_report.txt" file
 
     file.write(f"{overheads_summary_report()}\n")
-    # Writes the highest overheads category and value
+    # Writes the highest overheads category and value into 
     
     if len(cash_on_hand) == 0:
         file.write(f"[CASH SURPLUS] Cash on hand for each period is higher than the previous period\n") 
