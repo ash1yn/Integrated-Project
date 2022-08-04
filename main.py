@@ -11,12 +11,12 @@ summary_report = Path.cwd()/"summary_report.txt"
 cash_on_hand = cash_on_hand_summary_report()
 profits_and_loss = profits_and_loss_summary_report()
 
-with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
+with summary_report.open(mode = "w", encoding = "ASCII", error = "ignore", newline = "") as file:
     file.write(f"[REAL TIME CURRENCY CONVERSION] USD 1 = SGD {exchange_rate()}\n")
-    # Writes the real time currency conversion from USD to SGD, into the "summary_report.txt" file
+    # Write the real time currency conversion from USD to SGD, into the "summary_report.txt" file
 
     file.write(f"{overheads_summary_report()}\n")
-    
+    # Writes the highest overheads category and value into the "summary_report.txt" file
     
     if len(cash_on_hand) == 0:
         file.write(f"[CASH SURPLUS] Cash on hand for each period is higher than the previous period\n") 
