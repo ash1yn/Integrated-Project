@@ -13,7 +13,7 @@ profits_and_loss = profits_and_loss_summary_report()
 
 with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
     file.write(f"[REAL TIME CURRENCY CONVERSION] USD 1 = SGD {exchange_rate()}\n")
-    # Write 
+    # Write the 
 
     file.write(f"{overheads_summary_report()}\n")
     # w
