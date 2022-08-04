@@ -16,15 +16,15 @@ with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
     # Writes the real time currency conversion from USD to SGD, into the "summary_report.txt" file
 
     file.write(f"{overheads_summary_report()}\n")
-    # Writes the highest overheads category and value into the "summary_report.txt" file
+    
     
     if len(cash_on_hand) == 0:
-        file.write(f"[CASH SURPLUS] Cash on hand for each period is higher than the previous period.\n") 
+        file.write(f"[CASH SURPLUS] Cash on hand for each period is higher than the previous period\n") 
     for l in range (len(cash_on_hand)): 
         file.write(f"[CASH DEFICIT] DAY: {cash_on_hand[l][0]}, AMOUNT: SGD {cash_on_hand[l][1]}\n") 
     
     if len(profits_and_loss) == 0:
-        file.write(f"[NET SURPLUS] Net Profit for each period is higher than the previous period.\n")
+        file.write(f"[NET SURPLUS] Net Profit for each period is higher than the previous period\n")
     for i in range (len(profits_and_loss)):
         file.write(f"[NET DEFICIT] DAY: {profits_and_loss[i][0]}, AMOUNT: SGD {profits_and_loss[i][1]}\n")
     
