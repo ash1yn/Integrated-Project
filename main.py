@@ -21,13 +21,25 @@ with summary_report.open(mode = "w", encoding = "UTF-8", newline = "") as file:
         
         if len(cash_on_hand) == 0:
             file.write(f"[CASH SURPLUS] Cash on hand for each period is higher than the previous period\n") 
+            # As there is nothing appended to the empty list (cash_on_hand_main) in the function, this means that cash on hand 
+            # for each period is consecutively higher than the previous period
+
         for l in range (len(cash_on_hand)): 
             file.write(f"[CASH DEFICIT] DAY: {cash_on_hand[l][0]}, AMOUNT: SGD {cash_on_hand[l][1]}\n") 
+            # For the lists found in the empty list (cash_on_hand_main) in the function, the day and the value difference,
+            # will be highlighted and printed in the summary report as this means that cash on hand for each period is not 
+            # consecutively higher than the previous period
         
         if len(profits_and_loss) == 0:
             file.write(f"[NET SURPLUS] Net Profit for each period is higher than the previous period\n")
+            # As there is nothing appended to the empty list (profit_loss_main) in the function, this means that net for each period
+            # is consecutively higher than the previous period
+
         for i in range (len(profits_and_loss)):
             file.write(f"[NET DEFICIT] DAY: {profits_and_loss[i][0]}, AMOUNT: SGD {profits_and_loss[i][1]}\n")
+            # For the lists found in the empty list (profit_loss_main) in the function, the day and the value difference,
+            # will be highlighted and printed in the summary report as this means that net profit for each period is not consecutively
+            # higher than the previous period
     
     except Exception as e:
         print(f"An error has occurred. \nReason : {e}")
