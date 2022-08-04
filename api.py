@@ -17,14 +17,20 @@ USDtoSGD_Exchange_Rate = float(data['Realtime Currency Exchange Rate']['5. Excha
 # Used to find the exchange rate from USD to SGD found in the nested dictionary
 
 def convertUSDtoSGD(USD):
-    """
-    - converts USD to SGD
-    - one parameter required: USD
-    """
-    return USD * USDtoSGD_Exchange_Rate
+    try:
+        """
+        - converts USD to SGD
+        - one parameter required: USD
+        """
+        return USD * USDtoSGD_Exchange_Rate
+    except Exception as e:
+        print(f"An error has occurred. \nReason : {e} ")
 
 def exchange_rate():
-    """
-    - returns the exchange rate extracted from the API
-    """
-    return USDtoSGD_Exchange_Rate
+    try:
+        """
+        - returns the exchange rate extracted from the API
+        """
+        return USDtoSGD_Exchange_Rate
+    except Exception as e:
+        print(f"An error has occurred. \nReason : {e}")
