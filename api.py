@@ -11,10 +11,7 @@ data = response.json()
 
 def convertUSDtoSGD(USD):
     try:
-        """
-        - converts USD to SGD
-        - one parameter required: USD
-        """
+        
         USDtoSGD_Exchange_Rate = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
         # Used to find the exchange rate from USD to SGD found in the nested dictionary
 
@@ -25,9 +22,7 @@ def convertUSDtoSGD(USD):
 
 def exchange_rate():
     try:
-        """
-        - returns the exchange rate extracted from the API
-        """
+        
         USDtoSGD_Exchange_Rate = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
         # Used to find the exchange rate from USD to SGD found in the nested dictionary
 
