@@ -5,6 +5,10 @@ from api import convertUSDtoSGD
 highest = 0 
 
 def overheads_summary_report():
+    """
+    - Return the overhead category and its value in the "Overheads.csv" file
+    """
+    
     try:
         global highest
         
