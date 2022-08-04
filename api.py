@@ -15,7 +15,6 @@ def convertUSDtoSGD(USD):
     - one parameter required: USD
     """
     
-    
     try:
         
         USDtoSGD_Exchange_Rate = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
@@ -30,6 +29,7 @@ def exchange_rate():
     """
     - returns the exchange rate extracted from the API
     """
+    
     try:
         
         USDtoSGD_Exchange_Rate = float(data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
