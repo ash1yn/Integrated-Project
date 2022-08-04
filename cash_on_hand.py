@@ -4,7 +4,8 @@ from api import convertUSDtoSGD
 
 def cash_on_hand_summary_report():
     """
-    - Returns the 
+    - Compute the cash on hand difference each day
+    - Highlights the day where cash on hand lower than the previous day, and the value difference, in the scenario that cash on hand is not higher each day
     """
     try:
         cash_on_hand = Path.cwd()/"csv_reports"/"Cash on Hand.csv"
