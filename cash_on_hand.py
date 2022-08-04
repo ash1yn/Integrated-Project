@@ -3,7 +3,10 @@ import re, csv
 from api import convertUSDtoSGD
 
 def cash_on_hand_summary_report():
-    
+    """
+    - Compute the difference in cash on hand between each day, from the data given in the "Cash on Hand.csv" file
+    - Highlights the day where cash on hand lower than the previous day, and the value difference, in the scenario that cash on hand is not higher each day
+    """
     try:
         cash_on_hand = Path.cwd()/"csv_reports"/"Cash on Hand.csv"
         # Create a file path to the "Cash on Hand.csv" file in the "csv_reports" folder
