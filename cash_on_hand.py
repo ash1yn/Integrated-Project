@@ -4,7 +4,7 @@ from api import convertUSDtoSGD
 
 def cash_on_hand_summary_report():
     """
-    - Compute the cash on hand difference each day
+    - Compute the cash on hand difference each day, from the "Cash on Hand.csv" file
     - Highlights the day where cash on hand lower than the previous day, and the value difference, in the scenario that cash on hand is not higher each day
     """
     try:
