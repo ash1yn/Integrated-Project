@@ -6,9 +6,9 @@ highest = 0
 
 def overheads_summary_report():
     """
-    - Return the overhead category and its value in the "Overheads.csv" file
+    - Return the overhead category and its value, from the data given in the "Overheads.csv" file
     """
-    
+
     try:
         global highest
         
