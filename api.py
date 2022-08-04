@@ -23,6 +23,7 @@ def convertUSDtoSGD(USD):
         - one parameter required: USD
         """
         return USD * USDtoSGD_Exchange_Rate
+        
     except Exception as e:
         print(f"An error has occurred. \nReason : {e} ")
 
@@ -32,5 +33,6 @@ def exchange_rate():
         - returns the exchange rate extracted from the API
         """
         return USDtoSGD_Exchange_Rate
+
     except Exception as e:
         print(f"An error has occurred. \nReason : {e}")
