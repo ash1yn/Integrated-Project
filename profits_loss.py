@@ -3,10 +3,7 @@ import re, csv
 from api import convertUSDtoSGD
 
 def profits_and_loss_summary_report():
-    """
-    - Computes the difference in the net profit between each day, from the data found in the "Profits and Loss.csv"
-    - Highlights the day where net profit is lower than the previous day, and the value difference, in the scenario that net profit is not higher each day
-    """
+    
     
     try:
         profits_loss = Path.cwd()/"csv_reports"/"Profit and Loss.csv"
